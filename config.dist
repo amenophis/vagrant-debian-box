@@ -1,0 +1,24 @@
+$box_name = "wheezy64"
+$box_url = "/Users/jeremy/Documents/Web/debian-70rc1-x64-vbox4210.box"
+
+$name = "symfony2"
+$ip = "192.168.56.150"
+$ram = 512
+
+$remote_folder = "/var/www/symfony2"
+$nfs = true
+
+$puppet_facter = {
+  "mysql_user"                 => "symfony2",
+  "mysql_password"             => "symfony2",
+  "mysql_db_name"              => "symfony2",
+  "mysql_host"                 => "localhost",
+  "mysql_charset"              => "utf8",
+  "pma_mysql_root_password"    => "root",
+  "pma_controluser_password"   => "symfony2",
+  "pma_vhost_server_name"      => 'pma.symfony2.dev',
+  "vhost_server_name"          => 'symfony2.dev',
+  "vhost_server_alias"        => ['test.symfony2.dev', 'test2.symfony2.dev'],
+  "vhost_server_admin"         => 'webmaster@locahost',
+  "vhost_docroot"              => '/var/www/symfony2/web'
+}
