@@ -6,7 +6,6 @@ $ip = "192.168.56.150"
 $ram = 512
 
 $remote_folder = "/var/www/symfony2"
-$nfs = true
 
 $puppet_facter = {
   "mysql_user"                 => "symfony2",
@@ -18,7 +17,7 @@ $puppet_facter = {
   "pma_controluser_password"   => "symfony2",
   "pma_vhost_server_name"      => 'pma.symfony2.dev',
   "vhost_server_name"          => 'symfony2.dev',
-  "vhost_server_alias"        => ['test.symfony2.dev', 'test2.symfony2.dev'],
+  "vhost_server_alias"         => ['test.symfony2.dev', 'test2.symfony2.dev'],
   "vhost_server_admin"         => 'webmaster@locahost',
   "vhost_docroot"              => '/var/www/symfony2/web'
 }
