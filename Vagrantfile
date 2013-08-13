@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
   end
 
   nfs_setting = RUBY_PLATFORM =~ /darwin/ || RUBY_PLATFORM =~ /linux/
-  config.vm.synced_folder "../", $remote_folder, id: "vagrant-root", :nfs => $nfs
+  config.vm.synced_folder "../", $remote_folder, id: "vagrant-root", :nfs => nfs_setting
 
   config.vm.provision :shell, :inline => "sudo apt-get update"
 
